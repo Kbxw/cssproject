@@ -23,11 +23,7 @@ header{
     padding-right: 10px;
     margin-top:3%;
 }
-div.contenedor{
-    grid-area: contenedor;
-    margin-top:10px;
-    padding:10px;
-}
+
 img {
     float: left;
     margin-right: 5px;
@@ -40,15 +36,14 @@ h1{
 }
 h2{
     font-size: 2rem;
-    border-bottom:0.2rem solid deepskyblue;
 }
 li{
     padding:10px;
-    border-bottom:0.4rem solid deepskyblue;
     padding-right:15px;
 }
 p {
     margin-left: 10px;
+    padding: 10px;
     overflow:auto;
     display:block;
     text-align: left;
@@ -75,15 +70,7 @@ form{
 label{
     font-size: 1.3rem;
 }
-input, textarea{
-    display: flex;
-    max-width: fit-content;
-}
-input[type=text], textarea{
-    font-size: 1.3rem;
-    border:0.1rem solid deepskyblue;
-    background-color: transparent;
-}
+
 button{
     border:1px dashed deepskyblue;
     padding: 6px;
@@ -95,6 +82,30 @@ button{
     margin: 20;
     text-align: left;
 }
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+
 footer{
     padding:5px;
     border-top:0.2rem solid deepskyblue;
@@ -103,5 +114,18 @@ footer{
     font-size: 14px;
 }
 
-@media screen and (max-width:886px){
-}
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
